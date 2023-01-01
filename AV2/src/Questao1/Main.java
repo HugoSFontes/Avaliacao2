@@ -5,14 +5,14 @@ public class Main extends ValidarExpressao{
 	
 	public static void main(String[] args) {
 		
-		String expCorreta1 = "{b+c(a+b)} *c";
-		String expCorreta2 = "{a+[v-b*(f*i)]}";
-		String expErrada1 ="{a+c(b-c})";
-		String expErrada2 = "(a-b{h+c})";
-		System.out.println(validarExpressao(expCorreta1));
-		System.out.println(validarExpressao(expCorreta2));
-		System.out.println(validarExpressao(expErrada1));
-		System.out.println(validarExpressao(expErrada2));
+		String expressaoCorreta1 = "{b+c(a+b)} *c";
+		String expressaoCorreta2 = "A+[B*(C+D)] * E";
+		String expressaoIncorreta1 ="{a+c(b-c})";
+		String expressaoIncorreta2 = "A + B * (C + D] * E";
+		System.out.println(validarExpressao(expressaoCorreta1));
+		System.out.println(validarExpressao(expressaoCorreta2));
+		System.out.println(validarExpressao(expressaoIncorreta1));
+		System.out.println(validarExpressao(expressaoIncorreta2));
 	}
 
 }

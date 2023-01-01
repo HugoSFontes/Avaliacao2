@@ -12,7 +12,7 @@ public class ValidarExpressao {
 				pilha.empilhar(c); //caso encontrado na String, ele empilha o simbolo atual.
 			} else if( c == ')' || c == ']' || c== '}') {
 				if(pilha.pilhaVazia()) {
-					return false; // Caso não encontre a abertura da expressão, ou seja, a pilha vazia e econtre o fechamente, retorna falso.
+					return false; // Caso não encontre a abertura da expressão, ou seja, a pilha vazia e encontre o fechamento, retorna falso.
 				}
 			char simbolo = (char) pilha.desempilhar(); // desempilha, caso a pilha tenha conteúdo
 				if((c==')' && simbolo != '(') || (c==']' && simbolo != '[') || (c=='}' && simbolo != '{')) { //verifica se o simbolo a ser retirado é o fechamento do que está sendo examinado
